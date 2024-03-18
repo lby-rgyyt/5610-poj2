@@ -1,0 +1,26 @@
+/* HomePage.css */
+.home-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .intro {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .rules-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .rules-list {
+    margin-left: 20px;
+  }
+  
+  .explanation {
+    margin-top: 20px;
+  }
+  
