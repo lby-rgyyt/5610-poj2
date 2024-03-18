@@ -22,6 +22,7 @@ const Cell = ({ lifespan, life, onClick }) => {
 
   return (
     <div
+      // className={`cell ${currentLifespan > 0 ? 'alive' : 'dead'}`}
       className={`cell alive-${currentLifespan} life-${currentLife}`} // Update className to include 'life'
       onClick={handleClick}
     ></div>

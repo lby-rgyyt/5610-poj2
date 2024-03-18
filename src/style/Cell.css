@@ -1,54 +1,52 @@
 /* Cell.css */
 .cell {
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ccc;
-    background-color: white;
-  }
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
 
 /* Colors for different lifespans */
-.alive-0 {
+.alive-10 {
   background-color: #fff; /* White color for dead cells */
 }
 
-.alive-1 {
+.alive-0 {
   background-color: #000; /* Black color for cells alive for 1 round */
 }
 
-.alive-2 {
+.alive-4 {
   background-color: #ff0000; /* Red color for cells alive for 2 rounds */
 }
 
-.alive-3 {
+.alive-2 {
   background-color: #00ff00; /* Green color for cells alive for 3 rounds */
 }
 
-.alive-4 {
+.alive-3 {
   background-color: #0000ff; /* Blue color for cells alive for 4 rounds */
 }
 
-.alive-5 {
+.alive-1 {
   background-color: #ffff00; /* Yellow color for cells alive for 5 rounds */
 }
 
-.alive-6 {
+.alive-5 {
   background-color: #ff00ff; /* Magenta color for cells alive for 6 rounds */
 }
 
-.alive-7 {
+.alive-6 {
   background-color: #00ffff; /* Cyan color for cells alive for 7 rounds */
 }
 
-.alive-8 {
+.alive-7 {
   background-color: #ffa500; /* Orange color for cells alive for 8 rounds */
 }
 
-.alive-9 {
+.alive-8 {
   background-color: #008000; /* Dark green color for cells alive for 9 rounds */
 }
 
-.alive-10 {
+.alive-9 {
   background-color: #800080; /* Purple color for cells alive for 10 rounds */
 }
-
-  
