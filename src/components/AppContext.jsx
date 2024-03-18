@@ -1,5 +1,5 @@
 // AppContext.js
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from "react";
 
 const AppContext = createContext();
 
@@ -10,15 +10,22 @@ export const AppProvider = ({ children }) => {
   const [isLongerLastingMode, setIsLongerLastingMode] = useState(false);
 
   const toggleAutoplay = () => {
-    setIsAutoplaying(prevState => !prevState);
+    setIsAutoplaying((prevState) => !prevState);
   };
 
   const toggleLongerLastingMode = () => {
-    setIsLongerLastingMode(prevState => !prevState);
+    setIsLongerLastingMode((prevState) => !prevState);
   };
 
   return (
-    <AppContext.Provider value={{ isAutoplaying, toggleAutoplay, isLongerLastingMode, toggleLongerLastingMode }}>
+    <AppContext.Provider
+      value={{
+        isAutoplaying,
+        toggleAutoplay,
+        isLongerLastingMode,
+        toggleLongerLastingMode,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

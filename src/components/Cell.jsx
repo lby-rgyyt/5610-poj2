@@ -1,49 +1,31 @@
-// import React,{ useState } from 'react';
-// import { useAppContext } from './AppContext';
-// import '../style/Cell.css'; // Import CSS file
+import React, { useState, useEffect } from "react";
+import { useAppContext } from "./AppContext";
+import "../style/Cell.css"; // Import CSS file
 
-// const Cell = ({ alive, onClick }) => {
-//     const { isLongerLastingMode } = useAppContext();
-//     const [isAlive, setIsAlive] = useState(alive);
+const Cell = ({ lifespan, life, onClick }) => {
+  // Modify prop destructuring to include 'life'
+  const { isLongerLastingMode } = useAppContext();
+  const [currentLifespan, setCurrentLifespan] = useState(lifespan);
+  const [currentLife, setCurrentLife] = useState(life); // Initialize 'life' state with prop value
 
-//   const handleClick = () => {
-//     onClick(); // Call the onClick function passed from the parent component
-//   };
+  useEffect(() => {
+    setCurrentLifespan(lifespan);
+  }, [lifespan]);
 
-//   return (
-//     <div
-//       className={`cell ${alive ? 'alive' : 'dead'}`}
-//       onClick={handleClick} // Attach handleClick function to onClick event
-//     ></div>
-//   );
-// };
+  useEffect(() => {
+    setCurrentLife(life); // Update 'life' state when 'life' prop changes
+  }, [life]);
 
-// export default Cell;
+  const handleClick = () => {
+    onClick();
+  };
 
-// Cell.js
-import React, { useState, useEffect } from 'react';
-import { useAppContext } from './AppContext';
-import '../style/Cell.css'; // Import CSS file
-
-const Cell = ({ lifespan, onClick }) => {
-    const { isLongerLastingMode } = useAppContext();
-    const [currentLifespan, setCurrentLifespan] = useState(lifespan);
-
-    useEffect(() => {
-        setCurrentLifespan(lifespan); // Update currentLifespan state when lifespan prop changes
-    }, [lifespan]);
-
-    const handleClick = () => {
-        onClick(); // Call the onClick function passed from the parent component
-    };
-
-    return (
-        <div
-            // className={`cell ${currentLifespan > 0 ? 'alive' : 'dead'}`}
-            className={`cell alive-${currentLifespan}`}
-            onClick={handleClick} // Attach handleClick function to onClick event
-        ></div>
-    );
+  return (
+    <div
+      className={`cell alive-${currentLifespan} life-${currentLife}`} // Update className to include 'life'
+      onClick={handleClick}
+    ></div>
+  );
 };
 
 export default Cell;

@@ -1,25 +1,24 @@
 .credits-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .description {
-    margin-bottom: 20px;
-  }
-  
-  .links {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .link {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .link:hover {
-    color: #0056b3;
-  }
-  
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #0056b3;
+}
